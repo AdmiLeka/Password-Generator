@@ -24,6 +24,10 @@ public class Controller {
         textField.setText(generatePassword(getChoices()));
     }
 
+    public void copy(ActionEvent e) {
+
+    }
+
     public String generatePassword(String choices) {
         String password = "";
         for (int i = 0; i < 12; i++) {

@@ -10,10 +10,18 @@
 }
 
 .button {
+    -fx-font-size: 12;
     -fx-background-color: #000000;
+    -fx-font-family: "Courier New";
 }
 
 .button:hover {
     -fx-background-color: #C0C0C0;
 
+}
+
+.check-box {
+    -fx-font-size: 15;
+    -fx-text-fill: #FFFAFA;
+    -fx-font-family: "Courier New";
 }

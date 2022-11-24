@@ -16,7 +16,6 @@ public class passwordGenerator extends Application {
     public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("main.fxml")));
         Scene scene = new Scene(root);
-
         stage.setTitle("Password Generator");
         try {
             stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("icon.png"))));
@@ -24,7 +23,6 @@ public class passwordGenerator extends Application {
             System.out.println("Favicon could not be located");
         }
         stage.setResizable(false);
-
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("styles.css")).toExternalForm());
         stage.setScene(scene);
         stage.show();

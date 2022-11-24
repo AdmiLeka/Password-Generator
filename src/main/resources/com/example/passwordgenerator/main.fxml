@@ -4,26 +4,20 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.passwordgenerator.Controller">
    <children>
       <Label fx:id="label" layoutY="40.0" prefHeight="18.0" prefWidth="600.0" text="Password Generator" textAlignment="CENTER" textFill="WHITE" />
       <TextField fx:id="textField" layoutX="85.0" layoutY="130.0" prefHeight="26.0" prefWidth="217.0" promptText="Password" />
-      <Button layoutX="388.0" layoutY="118.0" mnemonicParsing="false" onAction="#up" text="Refresh">
+      <Button layoutX="388.0" layoutY="118.0" mnemonicParsing="false" onAction="#up" text="Refresh" textFill="WHITE">
          <effect>
             <Lighting>
                <bumpInput>
-                  <Shadow height="184.76" radius="84.2775" width="154.35">
-                     <color>
-                        <Color red="0.6315789222717285" green="0.6315789222717285" blue="0.6315789222717285" />
-                     </color>
-                  </Shadow>
+                  <Shadow />
                </bumpInput>
                <light>
                   <Light.Distant />
@@ -33,7 +27,14 @@
       </Button>
       <Button layoutX="388.0" layoutY="175.0" mnemonicParsing="false" text="Copy" textFill="WHITE">
          <effect>
-            <Bloom />
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
          </effect>
       </Button>
       <CheckBox fx:id="hasLower" layoutX="382.0" layoutY="255.0" mnemonicParsing="false" selected="true" text="Lowercase Letters" />
