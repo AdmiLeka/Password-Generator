@@ -11,9 +11,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.passwordgenerator.Controller">
    <children>
-      <Label fx:id="label" layoutY="40.0" prefHeight="18.0" prefWidth="600.0" text="Password Generator" textAlignment="CENTER" textFill="WHITE" />
-      <TextField fx:id="textField" layoutX="85.0" layoutY="130.0" prefHeight="26.0" prefWidth="217.0" promptText="Password" />
-      <Button layoutX="388.0" layoutY="118.0" mnemonicParsing="false" onAction="#up" text="Refresh" textFill="WHITE">
+      <Label fx:id="label" layoutX="3.0" layoutY="29.0" prefHeight="18.0" prefWidth="600.0" text="Password Generator" textAlignment="CENTER" textFill="WHITE" />
+      <TextField fx:id="textField" layoutX="87.0" layoutY="116.0" prefHeight="26.0" prefWidth="217.0" promptText="Password" />
+      <Button layoutX="385.0" layoutY="99.0" mnemonicParsing="false" onAction="#up" text="Refresh" textFill="WHITE">
          <effect>
             <Lighting diffuseConstant="0.85" specularConstant="0.63">
                <bumpInput>
@@ -25,7 +25,7 @@
             </Lighting>
          </effect>
       </Button>
-      <Button layoutX="388.0" layoutY="175.0" mnemonicParsing="false" onAction="#copy" text="Copy" textFill="WHITE">
+      <Button layoutX="388.0" layoutY="156.0" mnemonicParsing="false" onAction="#copy" text="Copy" textFill="WHITE">
          <effect>
             <Lighting diffuseConstant="0.85" specularConstant="0.63">
                <bumpInput>
@@ -41,5 +41,7 @@
       <CheckBox fx:id="hasUpper" layoutX="382.0" layoutY="285.0" mnemonicParsing="false" text="Uppercase Letters" />
       <CheckBox fx:id="hasChar" layoutX="382.0" layoutY="315.0" mnemonicParsing="false" text="Special Characters" />
       <CheckBox fx:id="hasNum" layoutX="382.0" layoutY="345.0" mnemonicParsing="false" text="Numbers" />
+      <Label fx:id="warningLabel" layoutX="32.0" layoutY="318.0" prefHeight="18.0" prefWidth="149.0" textAlignment="CENTER" textFill="WHITE" />
+      <TextField fx:id="passLen" layoutX="385.0" layoutY="218.0" prefHeight="26.0" prefWidth="121.0" promptText="Password Length" visible="false" />
    </children>
 </AnchorPane>

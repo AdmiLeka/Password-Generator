@@ -13,23 +13,26 @@ import java.util.Random;
 public class Controller {
 
     @FXML
-    private TextField textField;
+    private TextField textField, passLen;
     @FXML
     private CheckBox hasNum, hasChar, hasLower, hasUpper;
+    @FXML
+    private static Label warningLabel;
     private Random random = new Random();
-    private String lettersLower = "abcdefghijklmnopqrstuvwxyz";
-    private String lettersUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    private String numbers = "0123456789";
-    private String specialChars = "!@#$%^&*()_?[]{}<>/|\";:',.`";
+    private final String lettersLower = "abcdefghijklmnopqrstuvwxyz";
+    private final String lettersUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    private final String specialChars = "!@#$%^&*()_?[]{}<>/|\";:',.`+-*/=";
+    private final String numbers = "0123456789";
 
     public void up(ActionEvent e) {
-        textField.setText(generatePassword(getChoices()).toString());
+        textField.setText(generatePassword(getChoices().toString()).toString());
     }
 
     public void copy(ActionEvent e) {
         StringSelection selection = new StringSelection(textField.getText());
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(selection, selection);
+        System.out.println(passLen.getText());
     }
 
     public StringBuilder generatePassword(String choices) {
@@ -40,19 +43,19 @@ public class Controller {
         return password;
     }
 
-    public String getChoices() {
-        String returnThis = "";
+    public StringBuilder getChoices() {
+        StringBuilder returnThis = new StringBuilder();
         if (hasNum.isSelected()) {
-            returnThis += numbers;
+            returnThis.append(numbers);
         }
         if (hasChar.isSelected()) {
-            returnThis += specialChars;
+            returnThis.append(specialChars);
         }
         if (hasLower.isSelected()) {
-            returnThis += lettersLower;
+            returnThis.append(lettersLower);
         }
         if (hasUpper.isSelected()) {
-            returnThis += lettersUpper;
+            returnThis.append(lettersUpper);
         }
         return returnThis;
     }

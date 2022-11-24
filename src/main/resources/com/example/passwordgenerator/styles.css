@@ -1,7 +1,8 @@
 .root{
-    -fx-background-color:#000000;
+    -fx-background-color: #000000;
 }
 
+/* Label styling */
 .label{
     -fx-font-size: 25;
     -fx-text-fill: #FFFAFA;
@@ -9,6 +10,14 @@
     -fx-alignment: center;
 }
 
+#warningLabel {
+    -fx-font-size: 17;
+    -fx-text-fill: #FFFAFA;
+    -fx-font-family: "Courier New";
+    -fx-alignment: center;
+}
+
+/* Button style */
 .button {
     -fx-font-size: 12;
     -fx-background-color: #000000;
@@ -23,6 +32,7 @@
     -fx-background-color: #949494;
 }
 
+/* Checkbox styling */
 .check-box {
     -fx-font-size: 15;
     -fx-text-fill: #FFFAFA;
