@@ -3,9 +3,11 @@ package com.example.passwordgenerator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
-import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 
+import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.util.Random;
 
 public class Controller {
@@ -21,17 +23,19 @@ public class Controller {
     private String specialChars = "!@#$%^&*()_?[]{}<>/|\";:',.`";
 
     public void up(ActionEvent e) {
-        textField.setText(generatePassword(getChoices()));
+        textField.setText(generatePassword(getChoices()).toString());
     }
 
     public void copy(ActionEvent e) {
-
+        StringSelection selection = new StringSelection(textField.getText());
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(selection, selection);
     }
 
-    public String generatePassword(String choices) {
-        String password = "";
+    public StringBuilder generatePassword(String choices) {
+        StringBuilder password = new StringBuilder();
         for (int i = 0; i < 12; i++) {
-            password += choices.charAt(random.nextInt(choices.length()));
+            password.append(choices.charAt(random.nextInt(choices.length())));
         }
         return password;
     }

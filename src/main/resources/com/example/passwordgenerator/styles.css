@@ -16,8 +16,11 @@
 }
 
 .button:hover {
-    -fx-background-color: #C0C0C0;
+    -fx-background-color: #434343;
+}
 
+.button:pressed {
+    -fx-background-color: #949494;
 }
 
 .check-box {

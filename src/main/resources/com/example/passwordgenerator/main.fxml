@@ -15,7 +15,7 @@
       <TextField fx:id="textField" layoutX="85.0" layoutY="130.0" prefHeight="26.0" prefWidth="217.0" promptText="Password" />
       <Button layoutX="388.0" layoutY="118.0" mnemonicParsing="false" onAction="#up" text="Refresh" textFill="WHITE">
          <effect>
-            <Lighting>
+            <Lighting diffuseConstant="0.85" specularConstant="0.63">
                <bumpInput>
                   <Shadow />
                </bumpInput>
@@ -25,9 +25,9 @@
             </Lighting>
          </effect>
       </Button>
-      <Button layoutX="388.0" layoutY="175.0" mnemonicParsing="false" text="Copy" textFill="WHITE">
+      <Button layoutX="388.0" layoutY="175.0" mnemonicParsing="false" onAction="#copy" text="Copy" textFill="WHITE">
          <effect>
-            <Lighting>
+            <Lighting diffuseConstant="0.85" specularConstant="0.63">
                <bumpInput>
                   <Shadow />
                </bumpInput>
