@@ -15,3 +15,6 @@ There is also a copy button which copies the generated password to the clipboard
 The application's user interface (currently) looks like this
 
 ![Password Generator screenshot 1](https://user-images.githubusercontent.com/95366089/205283512-bfb958b4-c6db-440d-86d6-4ce2bfeb1179.png)
+
+![Password Generator screenshot 2](https://user-images.githubusercontent.com/95366089/205284140-642de63e-8d6f-4833-8353-33646a7db705.png)
+
