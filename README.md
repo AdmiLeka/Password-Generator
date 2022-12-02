@@ -7,3 +7,5 @@ The goal of this application is to provide the user with strong passwords. There
 2. Including uppercase letters
 3. Including special charracters
 4. Including numbers
+
+There is also a copy button which copies the generated password to the clipboard, making it easy to paste it in a password text field or anywhere the user needs to.
