@@ -9,3 +9,7 @@ The goal of this application is to provide the user with strong passwords. There
 4. Including numbers
 
 There is also a copy button which copies the generated password to the clipboard, making it easy to paste it in a password text field or anywhere the user needs to.
+
+The application's user interface (currently) looks like this
+
+![Password Generator screenshot 1](https://user-images.githubusercontent.com/95366089/205283512-bfb958b4-c6db-440d-86d6-4ce2bfeb1179.png)
